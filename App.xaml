@@ -1,0 +1,48 @@
+﻿<Application x:Class="Clima.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Clima"
+             
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Plantilla de cabecera personalizada -->
+        <ControlTemplate x:Key="CustomWindowHeader" TargetType="ContentControl">
+            <Grid Background="#333333" Height="30">
+                <TextBlock Text="Weather App" Foreground="White" VerticalAlignment="Center" Margin="10"/>
+            </Grid>
+        </ControlTemplate>
+        <SolidColorBrush x:Key="BackgroundBrush" Color="#333333"/>
+        <!-- Fondo oscuro -->
+        <SolidColorBrush x:Key="ForegroundBrush" Color="White"/>
+        <!-- Texto blanco -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#444444"/>
+            <!-- Color de fondo de los botones -->
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#666666"/>
+                    <!-- Cambia el color al pasar el mouse -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para los cuadros de texto -->
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#555555"/>
+            <!-- Color de fondo de los cuadros de texto -->
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <!-- Estilo para las etiquetas -->
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Application.Resources>
+</Application>
